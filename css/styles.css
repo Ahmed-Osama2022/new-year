@@ -1,4 +1,12 @@
+/* Arabic - Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@500;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+
+:root {
+    --shadow-color: #cc0000;
+}
 * {
     padding: 0;
     margin: 0;
@@ -6,4 +14,221 @@
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+
 }
+.header {
+    background-color: #333;
+    background-color: #595959;
+    color: #ccc;
+    height: 2.6rem;
+    width: 100%;
+    padding: 1.6rem 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+
+    box-shadow: 0 0 10px 1px var(--shadow-color);
+}
+.header p {
+    font-size: 1.65rem;
+    font-weight: 800;
+    text-shadow:  0 0 1px #afafaf;  
+    color: #ff6666;
+
+}
+
+.image-wrapper {
+    width: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rbga(0,0,0, 0.8);
+    overflow: hidden;
+
+    box-shadow: 0 3px 10px 0 #ff6666;
+    margin: 0.23rem 0;
+}
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    overflow: hidden;
+
+    filter: opacity(.75);
+
+    animation:          scale 15s        ;
+    -webkit-animation:  scale 15s        ;
+    -o-animation:       scale 15s        ;
+    -moz-animation:     scale 15s        ;
+    -ms-animation:      scale 15s        ; 
+
+}
+@keyframes scale  {
+    0% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+
+    }
+}
+.celebrate {
+    position: absolute;
+    top: 18%;
+    left: 7%;
+    
+}
+.celebrate p {
+    display: inline-block;
+    margin: 0 1.2rem;
+
+    font-size: 2rem;
+    font-weight: 400;
+    opacity: 0;
+    text-shadow: 0 0.3rem 0.3rem var(--shadow-color);
+
+}
+.celebrate p:nth-child(1) {
+    /* animation =>      [duration] [Delay] [fill-mode] */
+    animation:          celebrate 1.5s  forwards 2 ;
+    -webkit-animation:  celebrate 1.5s  forwards 2  ;
+    -moz-animation:     celebrate 1.5s  forwards 2 ;
+    -o-animation:       celebrate 1.5s  forwards 2 ;
+    -ms-animation:      celebrate 1.5s  forwards 2 ;
+
+    
+}
+
+.celebrate p:nth-child(2) {
+       /* animation =>      [duration] [Delay] [fill-mode] */
+       animation:          celebrate 2s  forwards;
+       -webkit-animation:  celebrate 2s  forwards   ;
+       -moz-animation:     celebrate 2s  forwards  ;
+       -o-animation:       celebrate 2s  forwards ;
+       -ms-animation:      celebrate 2s  forwards ;
+}
+.celebrate p:nth-child(3) {
+      /* animation =>      [duration] [Delay] [fill-mode] */
+      animation:          celebrate 2.5s  forwards 2;
+      -webkit-animation:  celebrate 2.5s  forwards 2  ;
+      -moz-animation:     celebrate 2.5s  forwards 2 ;
+      -o-animation:       celebrate 2.5s  forwards 2;
+      -ms-animation:      celebrate 2.5s  forwards 2;
+}
+.celebrate p:nth-child(4) {
+   /* animation =>      [duration] [Delay] [fill-mode] */
+    animation:         celebrate 3s  forwards;
+   -webkit-animation:  celebrate 3s  forwards   ;
+   -moz-animation:     celebrate 3s  forwards  ;
+   -o-animation:       celebrate 3s  forwards ;
+   -ms-animation:      celebrate 3s  forwards ;
+}
+@keyframes celebrate {
+    0% {
+        transform: translateY(40rem) rotateY(-20deg);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        display: none;
+    }
+}
+.word {
+    /* width: fit-content; */
+    width: max-content;
+    /* padding: 0.5rem; */
+    border-radius: 15px;
+    background-color: #ecebeb;
+
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: flex-start; */
+    
+    margin: 6rem auto;
+
+}
+.word h1 {
+    text-shadow: 0 0 1px var(--shadow-color);
+    /* color: #ff0000; */
+    color: #4d4d4d;
+    font-family: 'Noto Naskh Arabic', serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    
+    /* Important for the typing aniimation!!! */
+    /* word-wrap: ; */
+    white-space: nowrap;
+    overflow: hidden;
+    /* border-right: 1px solid #000; */
+    border-left: 1px solid #000;
+    padding-right: 5px;
+    /* padding: 0 5px; */
+    direction: rtl;
+    animation:    
+                typing 2s steps(20)  infinite alternate,
+                blink 0.7s infinite
+    ;
+    -webkit-animation:   typing 2s steps(20)  infinite alternate,
+                blink 0.7s infinite       ;
+    -o-animation:        typing 2s steps(20)   infinite alternate,
+                blink 0.7s infinite       ;
+    -moz-animation:      typing 2s steps(20)   infinite alternate,
+                blink 0.7s infinite       ;
+    -ms-animation:       typing 2s steps(20)   infinite alternate,
+                blink 0.7s infinite       ;
+}
+@keyframes typing {
+    0% {
+        width: 0%;
+        visibility: hidden;
+    }   
+    100% {
+        width: 110%;
+    } 
+}
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: #000;
+
+    }
+}
+
+
+
+
+
+
+
+.footer {
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: #17181b;
+    font-family: 'Baloo 2', cursive;
+
+    box-shadow: 0 1px 10px #002;
+
+    color: #ead6c8;
+    /* position: fixed; */
+    /* bottom: 0; */
+    padding: 1.4em 0;
+}
+.footer p {
+    font-size: 0.85em;
+    font-family: 'Baloo 2', cursive;
+    text-align: center;
+
+    margin: 0 0.2rem  ;
+   
+}
+
