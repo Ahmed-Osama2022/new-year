@@ -260,6 +260,13 @@ body {
 
     margin: 6rem 0 0;
 }
+.chances img {
+    animation:          scale 20s        ;
+    -webkit-animation:  scale 20s        ;
+    -o-animation:       scale 20s        ;
+    -moz-animation:     scale 20s        ;
+    -ms-animation:      scale 20s        ; 
+}
 #wish p {
     animation:none;
     /* width: 70%; */
